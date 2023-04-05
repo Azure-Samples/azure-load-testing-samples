@@ -1,6 +1,6 @@
-# Project Name
+# Azure Load Testing samples
 
-(short, 1-3 sentenced, description of the project)
+This repo has samples for Azure Load Testing.
 
 ## Features
 
