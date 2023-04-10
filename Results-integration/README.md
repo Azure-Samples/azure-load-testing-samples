@@ -2,7 +2,7 @@
 
 Azure Load Testing provides a unified dashboard of test statistics, client-side metrics, and server-side metrics that enable you to easily identify performance bottlenecks. You might want to use these load test results in a reporting tool of your choice.
 
-This is a sample set up to integrate and automatically visualize Azure Load Testing results in a dashboarding tool like PowerBI. 
+This repository contains a sample set up to integrate and automatically visualize your Azure Load Testing results in a PowerBI dashboard.
 
 Information on a sample scenario and instructions to use are available at https://techcommunity.microsoft.com/t5/apps-on-azure-blog/automated-and-customized-dashboards-for-azure-load-testing/ba-p/3786891 
 
