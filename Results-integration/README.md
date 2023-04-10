@@ -4,7 +4,7 @@ Azure Load Testing provides a unified dashboard of test statistics, client-side 
 
 This repository contains a sample set up to integrate and automatically visualize your Azure Load Testing results in a PowerBI dashboard.
 
-Information on a sample scenario and instructions to use are available at https://techcommunity.microsoft.com/t5/apps-on-azure-blog/automated-and-customized-dashboards-for-azure-load-testing/ba-p/3786891 
+You can find more information about this sample and instructions for how to use in the [following blog post](https://techcommunity.microsoft.com/t5/apps-on-azure-blog/automated-and-customized-dashboards-for-azure-load-testing/ba-p/3786891).
 
 ## Files in this sample
 
