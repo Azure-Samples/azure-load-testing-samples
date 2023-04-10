@@ -15,4 +15,4 @@ Information on a sample scenario and instructions to use are available at https:
 ## Resources
 
 - Learn more about [Azure Load Testing](https://aka.ms/malt)
-Refer to the documentation at https://aka.ms/malt-docs 
+- [Azure Load Testing documentation](https://aka.ms/malt-docs)
