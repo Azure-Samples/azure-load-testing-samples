@@ -8,7 +8,7 @@ Information on a sample scenario and instructions to use are available at https:
 
 ## Files in this sample
 
-1. exportResults.py - Python script to fetch load testing results and upload the CSV file to a blob storage
+1. `exportResults.py` - Python script to fetch load testing results and upload the CSV file to a blob storage
 2. `Demo podcast test.jmx` - JMeter script to run a load test against the [.NET podcast web application](https://github.com/Azure-Samples/azure-load-testing-samples/)
 3. Load Test Dashboard.pbit - PowerBI template file with charts to visualize load test results
 
