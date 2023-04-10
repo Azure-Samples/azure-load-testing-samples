@@ -6,7 +6,7 @@ This is a sample set up to integrate and automatically visualize Azure Load Test
 
 Information on a sample scenario and instructions to use are available at https://techcommunity.microsoft.com/t5/apps-on-azure-blog/automated-and-customized-dashboards-for-azure-load-testing/ba-p/3786891 
 
-Files in this sample 
+## Files in this sample
 
 1. exportResults.py - Python script to fetch load testing results and upload the CSV file to a blob storage
 2. Demo podcast test.jmx - JMeter script to run a load test against the .NET podcast web application (https://github.com/Azure-Samples/azure-load-testing-samples/)
