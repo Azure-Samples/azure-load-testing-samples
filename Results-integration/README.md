@@ -1,6 +1,6 @@
 # Results integration
 
-Azure Load Testing (ALT) provides a unified dashboard of test statistics, client-side metrics, and server-side metrics so that the performance bottlenecks can be easily identified. While the out of the box dashboard is helpful in most scenarios, you might want the load test results to be available in a tool of your choice. 
+Azure Load Testing provides a unified dashboard of test statistics, client-side metrics, and server-side metrics that enable you to easily identify performance bottlenecks. You might want to use these load test results in a reporting tool of your choice.
 
 This is a sample set up to integrate and automatically visualize Azure Load Testing results in a dashboarding tool like PowerBI. 
 
