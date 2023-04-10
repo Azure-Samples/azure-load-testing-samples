@@ -12,5 +12,7 @@ Files in this sample
 2. Demo podcast test.jmx - JMeter script to run a load test against the .NET podcast web application (https://github.com/Azure-Samples/azure-load-testing-samples/)
 3. Load Test Dashboard.pbit - PowerBI template file with charts to visualize load test results
 
-Learn more about Azure Load Testing at https://aka.ms/malt
+## Resources
+
+- Learn more about [Azure Load Testing](https://aka.ms/malt)
 Refer to the documentation at https://aka.ms/malt-docs 
