@@ -1,0 +1,41 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"label": "build",
+			"command": "dotnet",
+			"type": "process",
+			"args": [
+				"build",
+				"${workspaceFolder}/sdk-samples/dotnet/azure-load-testing-dotnet-sample/azure-load-testing-dotnet-sample.csproj",
+				"/property:GenerateFullPaths=true",
+				"/consoleloggerparameters:NoSummary"
+			],
+			"problemMatcher": "$msCompile"
+		},
+		{
+			"label": "publish",
+			"command": "dotnet",
+			"type": "process",
+			"args": [
+				"publish",
+				"${workspaceFolder}/sdk-samples/dotnet/azure-load-testing-dotnet-sample/azure-load-testing-dotnet-sample.csproj",
+				"/property:GenerateFullPaths=true",
+				"/consoleloggerparameters:NoSummary"
+			],
+			"problemMatcher": "$msCompile"
+		},
+		{
+			"label": "watch",
+			"command": "dotnet",
+			"type": "process",
+			"args": [
+				"watch",
+				"run",
+				"--project",
+				"${workspaceFolder}/sdk-samples/dotnet/azure-load-testing-dotnet-sample/azure-load-testing-dotnet-sample.csproj"
+			],
+			"problemMatcher": "$msCompile"
+		}
+	]
+}
