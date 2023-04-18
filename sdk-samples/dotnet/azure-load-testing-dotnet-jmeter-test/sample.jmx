@@ -44,16 +44,6 @@
           <stringProp name="HTTPSampler.connect_timeout"></stringProp>
           <stringProp name="HTTPSampler.response_timeout"></stringProp>
         </HTTPSamplerProxy>
-        <hashTree>
-          <JSR223PostProcessor guiclass="TestBeanGUI" testclass="JSR223PostProcessor" testname="JSR223 PostProcessor" enabled="true">
-            <stringProp name="cacheKey">true</stringProp>
-            <stringProp name="filename"></stringProp>
-            <stringProp name="parameters"></stringProp>
-            <stringProp name="script">log.info(&quot;Nick was here (info)&quot;)</stringProp>
-            <stringProp name="scriptLanguage">groovy</stringProp>
-          </JSR223PostProcessor>
-          <hashTree/>
-        </hashTree>
       </hashTree>
     </hashTree>
   </hashTree>
