@@ -1,0 +1,24 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<OutputType>Exe</OutputType>
+		<TargetFramework>net7.0</TargetFramework>
+		<RootNamespace>azure_load_testing_dotnet_jmeter_test</RootNamespace>
+		<ImplicitUsings>enable</ImplicitUsings>
+		<Nullable>enable</Nullable>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<PackageReference Include="Azure.Core" Version="1.31.0" />
+		<PackageReference Include="Azure.Developer.LoadTesting" Version="1.0.1" />
+		<PackageReference Include="Azure.Identity" Version="1.8.2" />
+		<PackageReference Include="Azure.ResourceManager.LoadTesting" Version="1.0.1" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<None Update="sample.jmx">
+			<CopyToOutputDirectory>Always</CopyToOutputDirectory>
+		</None>
+	</ItemGroup>
+
+</Project>
