@@ -1,8 +1,8 @@
 # Azure Load Testing samples
 
-This repo contains a collection of samples for using Azure Load Testing.
+This repo contains a collection of samples for using Azure Load Testing. Azure Load Testing is a fully managed load-testing service that enables you to generate high-scale load. The service simulates traffic for your applications, regardless of where they're hosted.
 
-Azure Load Testing is a fully managed load-testing service that enables you to generate high-scale load. The service simulates traffic for your applications, regardless of where they're hosted. Developers, testers, and quality assurance (QA) engineers can use it to optimize application performance, scalability, or capacity.
+![Azure Load Testing architecture overview](./media/azure-load-testing-architecture.png)
 
 Learn more by going to the [Azure Load Testing product documentation](https://learn.microsoft.com/azure/load-testing).
 
