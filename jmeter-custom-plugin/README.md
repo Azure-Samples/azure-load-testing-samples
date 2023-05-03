@@ -1,4 +1,5 @@
 As .Jar(Java Archive) can be easily integrated to Jmeter. Custom Plugin can be created in Java project and all functions can be called straightly using JSR223Sample or Beanshell sampler.
+
 Steps for Creating Custom Plugin
 1. Download the Sample Java Maven project - azureloadtest_custompluginsample.zip
 2. Using Maven create a JAR using the command 
