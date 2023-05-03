@@ -1,4 +1,15 @@
-# Read CSV data
+---
+page_type: sample
+languages:
+- xml
+products:
+- azure
+- azure-load-testing
+urlFragment: azure-load-testing-jmeter-read-csv
+description: Read input data from a CSV file in Azure Load Testing
+---
+
+# Read input data from a CSV file in Azure Load Testing
 
 In this sample, you read a list of urls from a CSV file and then call a *Dummy sampler* to simulate a web request for each URL. This sample contains a sample JMeter test script and a CSV file.
 
