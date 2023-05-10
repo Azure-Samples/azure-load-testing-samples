@@ -17,11 +17,11 @@ In this sample we will talking about steps for creating custom plugin
 ## Prerequisites
 
 - An Azure Load Testing resource. An Azure Load Testing resource. To create a Load Testing resource, see [Create and run a load test](https://learn.microsoft.com/azure/load-testing/quickstart-create-and-run-load-test#create-an-azure-load-testing-resource).
-- https://techcommunity.microsoft.com/t5/apps-on-azure-blog/custom-plugin-creation-and-integration-with-jmeter-and-azure/ba-p/3745773
+- Creating Custom Plugin and integrating it with JMeter [Create and Integrate custom plugin](https://techcommunity.microsoft.com/t5/apps-on-azure-blog/custom-plugin-creation-and-integration-with-jmeter-and-azure/ba-p/3745773).
 
 ## Run this sample
 
-1. Download the Sample Java Maven project - azureloadtest_custompluginsample.zip
+1. Download the Sample Java Maven project - **codepackage**
 2. Using Maven create a JAR using the command 
 mvn clean compile assembly:single
 Note: Execute this command on the location having .pom file present.
