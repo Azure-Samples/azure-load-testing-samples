@@ -3,10 +3,10 @@ page_type: sample
 products:
 - azure-load-testing
 urlFragment: azure-load-testing-jmeter-custom-plugin
-description: Create and Integrate Custom Plugin for JMeter in Azure Load Testing
+description: Create and Integrate custom plugin for JMeter in Azure Load Testing
 ---
 
-# Create Custom plugin and Integrate in Jmeter for Azure Load Testing
+# Create custom plugin and Integrate in Jmeter for Azure Load Testing
 
 As .Jar(Java Archive) can be easily integrated to Jmeter. Custom Plugin can be created in Java project and all functions can be called straightly using JSR223Sample or Beanshell sampler.
 In this sample we will talking about steps for creating custom plugin
