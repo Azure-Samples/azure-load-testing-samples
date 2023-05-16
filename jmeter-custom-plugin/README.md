@@ -1,9 +1,6 @@
 ---
 page_type: sample
-languages:
-- java
 products:
-- jmeter Custom Plugin.
 - azure-load-testing
 urlFragment: azure-load-testing-jmeter-custom-plugin
 description: Create and Integrate Custom Plugin for JMeter in Azure Load Testing
