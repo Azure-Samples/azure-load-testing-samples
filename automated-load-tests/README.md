@@ -1,3 +1,14 @@
+---
+page_type: sample
+languages:
+- Python
+products:
+- azure
+- azure-load-testing
+urlFragment: automated-load-tests
+description: Automatically run and monitor load tests by using the Azure Load Testing library for Python
+---
+
 # Automated load tests
 
 Using Azure Load Testing (ALT), customers can run load tests and get a unified dashboard of test statistics, client-side metrics, and server-side metrics so that the performance bottlenecks can be easily identified. While run tests and view the results dashboard, you might want to run the tests automatically on a schedule and monitor the results using a customized dashboard.  
