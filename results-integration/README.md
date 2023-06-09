@@ -1,4 +1,15 @@
-# Azure Load Testing results integration
+---
+page_type: sample
+languages:
+- Python
+products:
+- azure
+- azure-load-testing
+urlFragment: results-integration
+description: Automatically visualize load test results in a custom dashboard by using the Azure Load Testing library for Python
+---
+
+# Azure Load Testing results integration using the library for Python
 
 Azure Load Testing provides a unified dashboard of test statistics, client-side metrics, and server-side metrics that enable you to easily identify performance bottlenecks. You might want to use these load test results in a reporting tool of your choice.
 
