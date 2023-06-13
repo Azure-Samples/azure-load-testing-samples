@@ -14,11 +14,6 @@
     <hashTree>
       <Arguments guiclass="ArgumentsPanel" testclass="Arguments" testname="User Defined Variables" enabled="true">
         <collectionProp name="Arguments.arguments">
-          <elementProp name="udv_password" elementType="Argument">
-            <stringProp name="Argument.name">udv_password</stringProp>
-            <stringProp name="Argument.value">${__GetSecret(password)}</stringProp>
-            <stringProp name="Argument.metadata">=</stringProp>
-          </elementProp>
           <elementProp name="udv_threads" elementType="Argument">
             <stringProp name="Argument.name">udv_threads</stringProp>
             <stringProp name="Argument.value">${__BeanShell(System.getenv(&quot;threads&quot;))}</stringProp>
@@ -27,6 +22,21 @@
           <elementProp name="udv_duration" elementType="Argument">
             <stringProp name="Argument.name">udv_duration</stringProp>
             <stringProp name="Argument.value">${__BeanShell(System.getenv(&quot;duration&quot;))}</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="udv_database" elementType="Argument">
+            <stringProp name="Argument.name">udv_database</stringProp>
+            <stringProp name="Argument.value">${__BeanShell(System.getenv(&quot;database&quot;))}</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="udv_username" elementType="Argument">
+            <stringProp name="Argument.name">udv_username</stringProp>
+            <stringProp name="Argument.value">${__BeanShell(System.getenv(&quot;username&quot;))}</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="udv_password" elementType="Argument">
+            <stringProp name="Argument.name">udv_password</stringProp>
+            <stringProp name="Argument.value">${__GetSecret(password)}</stringProp>
             <stringProp name="Argument.metadata">=</stringProp>
           </elementProp>
         </collectionProp>
@@ -38,7 +48,7 @@
         <stringProp name="connectionAge">5000</stringProp>
         <stringProp name="connectionProperties"></stringProp>
         <stringProp name="dataSource">test_pool</stringProp>
-        <stringProp name="dbUrl">jdbc:sqlserver://alt-demo-server.database.windows.net:1433;database=alt-demoblog-db</stringProp>
+        <stringProp name="dbUrl">${udv_database}</stringProp>
         <stringProp name="driver">com.microsoft.sqlserver.jdbc.SQLServerDriver</stringProp>
         <stringProp name="initQuery"></stringProp>
         <boolProp name="keepAlive">true</boolProp>
@@ -48,7 +58,7 @@
         <stringProp name="timeout">10000</stringProp>
         <stringProp name="transactionIsolation">DEFAULT</stringProp>
         <stringProp name="trimInterval">60000</stringProp>
-        <stringProp name="username">azureuser</stringProp>
+        <stringProp name="username">${udv_username}</stringProp>
       </JDBCDataSource>
       <hashTree/>
       <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="Azure SQL Database Test" enabled="true">
