@@ -18,11 +18,7 @@ In this sample script we perform the following operations:
 
 1. Create a Load Testing resource
 1. Create a load test
-1. Upload files to the load test
-1. Add app components to the test for monitoring 
-1. Add server metrics for the above app component
 1. Run the test by creating a test run
-1. Download result files for the test run
 
 ## Prerequisites
 
@@ -34,7 +30,7 @@ In this sample script we perform the following operations:
 
 ### Preparation
 
-1. Open the source code in VS Code.
+1. Open the sample script in VS Code.
 
 1. Update the `create-run-test.sh` file and replace the text placeholders:
 
