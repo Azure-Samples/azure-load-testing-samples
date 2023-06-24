@@ -1,0 +1,6 @@
+displayName: My CLI Load Test
+testPlan: sample.jmx
+description: Created using az CLI
+engineInstances: 2
+testId: myLoadTest
+splitAllCSVs: False
