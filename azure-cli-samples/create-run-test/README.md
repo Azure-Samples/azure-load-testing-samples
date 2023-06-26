@@ -19,6 +19,7 @@ In this sample script we perform the following operations:
 1. Create a Load Testing resource
 1. Create a load test
 1. Run the test by creating a test run
+1. View results for the test run
 
 ## Prerequisites
 

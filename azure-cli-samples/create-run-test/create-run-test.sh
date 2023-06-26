@@ -22,3 +22,6 @@ testRunId="run_"`date +"%Y%m%d%_H%M%S"`
 displayName="Run"`date +"%Y/%m/%d_%H:%M:%S"`
 
 az load test-run create --load-test-resource $loadTestResource --test-id $testId --test-run-id $testRunId --display-name $displayName --description "Test run from CLI"
+
+# Get test run client-side metrics
+az load test-run metrics list --load-test-resource $loadTestResource --test-run-id $testRunId --metric-namespace LoadTestRunMetrics
