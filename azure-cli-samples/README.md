@@ -16,7 +16,7 @@ Azure Load Testing enables load testing databases to ensure that they can handle
 
 This repository contain samples to run Azure Load Testing from Azure CLI.
 
-You can find more information about the az load extension for Azure Load Testing [here](https://learn.microsoft.com/cli/azure/service-page/azure%20load%20testing).
+You can find more information about the `az load` extension for Azure Load Testing [here](https://learn.microsoft.com/cli/azure/service-page/azure%20load%20testing).
 
 ## Code samples
 
