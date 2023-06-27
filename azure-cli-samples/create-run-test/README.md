@@ -10,7 +10,7 @@ urlFragment: azure-load-testing-create-test-azure-cli
 description: Create and run load test with load test from Azure CLI extension for Azure Load Testing
 ---
 
-# Create and run load test with load test by using the Azure CLI extension for Azure Load Testing
+# Create and run a load test by using the Azure Load Testing Azure CLI extension
 
 This project demonstrates how to use an Azure CLI sample script to create and run a load test on Azure Load Testing.
 
