@@ -64,7 +64,7 @@ In this sample script we perform the following operations:
 
 1. Go to the [Azure portal](https://portal.azure.com).
 
-1. Go to the Azure Load Testing resource to view the test results.
+1. Go to the Azure load testing resource to view the test results.
 
 ## Resources
 
