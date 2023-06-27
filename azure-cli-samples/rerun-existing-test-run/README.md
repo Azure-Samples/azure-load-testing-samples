@@ -16,7 +16,7 @@ This project demonstrates how to use an Azure CLI sample script to rerun an exis
 
 In this sample script we perform the following operations:
 
-1. Get the most recently run test run Id for a test
+1. Get the most recently run test run ID for a test
 1. Rerun the test
 1. Display the client side metrics for the test run
 
