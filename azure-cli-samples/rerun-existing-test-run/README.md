@@ -25,7 +25,7 @@ In this sample script we perform the following operations:
 1. An existing Azure subscription. If you don't already have a Microsoft Azure subscription, you can create one for free [here](http://go.microsoft.com/fwlink/?LinkId=330212).
 1. An existing resource group.
 1. Azure CLI. You can install by following the steps mentioned [here](https://docs.microsoft.com/cli/azure/install-azure-cli).
-1. An existing Azure Load Testing resource and a load test with existing test runs.
+1. An existing Azure load testing resource and a load test with existing test runs.
 
 ## Getting started
 
