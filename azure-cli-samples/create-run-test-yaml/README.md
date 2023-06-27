@@ -19,7 +19,7 @@ In this sample script we perform the following operations:
 1. Create an Azure load testing resource
 1. Create a load test with load testing YAML config file
 1. Add app components to the test for monitoring
-1. Add server metrics for the above app component
+1. Add server metrics for the app component
 1. Run the test by creating a test run
 1. Download result files for the test run
 
