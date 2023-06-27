@@ -10,7 +10,7 @@ urlFragment: azure-load-testing-create-with-yaml-azure-cli
 description: Create and run load test with load test with load testing YAML config file from Azure CLI extension for Azure Load Testing
 ---
 
-# Create and run load test with load test with load testing YAML config file by using the Azure CLI extension for Azure Load Testing
+# Create and run a load test with YAML configuration by using the Azure CLI
 
 This project demonstrates how to use an Azure CLI sample script to create and run a load test with [load testing YAML config file](https://learn.microsoft.com/azure/load-testing/reference-test-config-yaml) on Azure Load Testing.
 
