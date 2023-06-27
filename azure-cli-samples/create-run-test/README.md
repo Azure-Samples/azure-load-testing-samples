@@ -12,7 +12,7 @@ description: Create and run load test with load test from Azure CLI extension fo
 
 # Create and run a load test by using the Azure Load Testing Azure CLI extension
 
-This project demonstrates how to use an Azure CLI sample script to create and run a load test on Azure Load Testing.
+This project demonstrates how to use an Azure CLI sample script to create and run a load test on Azure Load Testing. You specify the load test configuration settings by using command-line parameters.
 
 In this sample script we perform the following operations:
 
