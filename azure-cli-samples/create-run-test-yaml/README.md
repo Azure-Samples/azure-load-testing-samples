@@ -16,7 +16,7 @@ This project demonstrates how to use an Azure CLI sample script to create and ru
 
 In this sample script we perform the following operations:
 
-1. Create a Load Testing resource
+1. Create an Azure load testing resource
 1. Create a load test with load testing YAML config file
 1. Add app components to the test for monitoring
 1. Add server metrics for the above app component
