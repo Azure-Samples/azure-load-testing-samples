@@ -20,7 +20,7 @@ You can find more information about the `az load` extension for Azure Load Testi
 
 ## Code samples
 
-1. [Create and run test by using Azure CLI](./create-run-test/)
+1. [Create and run test by using Azure CLI](./create-run-test/). Specify the test configuration settings as command-line parameters.
 1. [Create and run test by using Azure CLI with a load test YAML config file](./create-run-test-yaml/)
 1. [Rerun an existing test run](./rerun-existing-test-run/)
 
