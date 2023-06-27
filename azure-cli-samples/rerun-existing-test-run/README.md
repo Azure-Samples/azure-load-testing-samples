@@ -38,7 +38,7 @@ In this sample script we perform the following operations:
     | Placeholder | Description |
     | ----------- | ----------- |
     | `<subscriptionId>` | Azure subscription ID |
-    | `<myRG>` | Resource group that contains the Azure Load Testing resource. |
+    | `<myRG>` | Resource group that contains the Azure load testing resource. |
     | `<myLoadTestResource>` | Name of the Azure load testing resource.  |
     | `<myLoadTest>` | Unique name for the load test, must contain only lower-case alphabetic, numeric, underscore or hyphen characters. |
 
