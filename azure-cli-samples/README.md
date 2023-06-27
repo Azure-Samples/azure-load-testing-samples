@@ -12,7 +12,7 @@ description: Azure CLI samples for Azure Load Testing
 
 # Azure CLI samples for Azure Load Testing
 
-Azure Load Testing enables load testing databases to ensure that they can handle the expected workload and perform efficiently under heavy traffic.
+Azure Load Testing enables load testing applications to ensure that they can handle the expected workload and perform efficiently under heavy traffic.
 
 This repository contain samples to run Azure Load Testing from Azure CLI.
 

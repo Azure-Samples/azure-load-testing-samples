@@ -42,7 +42,7 @@ In this sample script we perform the following operations:
     | `<myLoadTestResource>` | Name of the Azure load testing resource.  |
     | `<myLoadTest>` | Unique name for the load test, must contain only lower-case alphabetic, numeric, underscore or hyphen characters. |
 
-1. Update the path for the JMeter script in `testPlan`.
+1. Update the absolute path for the JMeter script in `testPlan`.
 
 1. Update the app component(s) and server metric(s) for the target application you are testing.
 

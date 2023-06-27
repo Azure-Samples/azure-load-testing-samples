@@ -14,13 +14,13 @@ az load create --name $loadTestResource --location $location
 
 # Create a test with Load Test config YAML file
 loadTestConfig="config.yaml"
-az load test create --load-test-resource  $loadTestResource --test-id $testId --load-test-config-file "config.yaml" --display-name $loadTestConfig --description "Created using Az CLI YAML" 
+az load test create --load-test-resource  $loadTestResource --test-id $testId --load-test-config-file $loadTestConfig --display-name $loadTestConfig --description "Created using Az CLI YAML" 
 
 # Add an app component
-az load test app-component add --load-test-resource  $loadTestResource --test-id $testId --app-component-id "/subscriptions/7c71b563-0dc0-4bc0-bcf6-06f8f0516c7a/resourceGroups/demo-podcast/providers/Microsoft.Web/sites/demo-podcastwebapp" --app-component-type "Microsoft.Web/sites" --app-component-name "demo-podcastwebapp"
+az load test app-component add --load-test-resource  $loadTestResource --test-id $testId --app-component-id "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/samplerg/providers/Microsoft.Web/sites/demo-podcastwebapp" --app-component-type "Microsoft.Web/sites" --app-component-name "demo-podcastwebapp"
 
 # Create a server metric for the app component
-az load test server-metric add --load-test-resource $loadTestResource --test-id $testId --metric-id "/subscriptions/7c71b563-0dc0-4bc0-bcf6-06f8f0516c7a/resourceGroups/demo-podcast/providers/Microsoft.Web/sites/demo-podcastwebapp/providers/microsoft.insights/metricdefinitions/Http4xx" --metric-name "Http4xx" --metric-namespace "Microsoft.Web/sites" --app-component-id "/subscriptions/7c71b563-0dc0-4bc0-bcf6-06f8f0516c7a/resourceGroups/demo-podcast/providers/Microsoft.Web/sites/demo-podcastwebapp" --app-component-type "Microsoft.Web/sites" --aggregation "Average"
+az load test server-metric add --load-test-resource $loadTestResource --test-id $testId --metric-id "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/samplerg/providers/Microsoft.Web/sites/demo-podcastwebapp/providers/microsoft.insights/metricdefinitions/Http4xx" --metric-name "Http4xx" --metric-namespace "Microsoft.Web/sites" --app-component-id "/subscriptions/7c71b563-0dc0-4bc0-bcf6-06f8f0516c7a/resourceGroups/demo-podcast/providers/Microsoft.Web/sites/demo-podcastwebapp" --app-component-type "Microsoft.Web/sites" --aggregation "Average"
 
 # Run the test
 testRunId="run_"`date +"%Y%m%d%_H%M%S"`

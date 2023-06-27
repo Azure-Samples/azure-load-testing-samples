@@ -44,9 +44,9 @@ In this sample script we perform the following operations:
     | `<myLoadTestResource>` | Name of the Azure load testing resource.  |
     | `<myLoadTest>` | Unique name for the load test, must contain only lower-case alphabetic, numeric, underscore or hyphen characters. |
 
-1. Update the path for the YAML file in `loadTestConfig`.
+1. Update the absolute path for the YAML file in `loadTestConfig`.
 
-1. Update the app component(s) and server metric(s) for the target application you are testing.
+1. Update the app component(s) and server metric(s) for the target application you are testing. You can get these details using the `az resource show`command. [Learn more](https://learn.microsoft.com/cli/azure/resource?#az-resource-show).
 
 1. Update the `sample.jmx` file and replace the text placeholders:
 
