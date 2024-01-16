@@ -5,7 +5,7 @@ languages:
 products:
 - azure
 - azure-load-testing
-urlFragment: merge-results
+urlFragment: merge-results-csv-files
 description: Automatically consolidate Azure Load Testing results into a single CSV file. 
 ---
 
