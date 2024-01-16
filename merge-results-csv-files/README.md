@@ -9,7 +9,7 @@ urlFragment: merge-results-csv-files
 description: Automatically consolidate Azure Load Testing results into a single CSV file. 
 ---
 
-# Automated load tests using the Azure Load Testing library for Python
+# Automatically consolidate Azure Load Testing results into a single CSV file
 
 When you use the download results option in Azure Load Testing, the service splits the results into one CSV file per engine. 
 
