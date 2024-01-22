@@ -22,7 +22,7 @@ This sample shows two ways in which you can leverage automation for this scenari
 2.	Extract the downloaded Zip file and consolidate into a single CSV file. This is suitable if you have already downloaded the results file and you do not want to use any ALT APIs/SDKs for this automation. We will demonstrate this using a PowerShell script.
  
 
-Information on a sample scenario and instructions to use are available at <link to be updated>
+Information on a sample scenario and instructions to use are available at https://techcommunity.microsoft.com/t5/apps-on-azure-blog/consolidating-csv-results-files-in-azure-load-testing/ba-p/4033332
 
 ## Files in this sample 
 
