@@ -19,7 +19,7 @@ You can find more information about this sample and instructions for how to use 
 
 ## Code samples
 
-1. `Azure Service Bus.jmx` - JMeter script to load test an Azure Service Bus.
+1. `azure-service-bus.jmx` - JMeter script to load test an Azure Service Bus.
 
 1. `jmeter-plugins-azure-servicebus-0.3.0` - JMeter plugin for Azure Service Bus sampler.
 
