@@ -46,7 +46,7 @@ else
 $starterkitsetup = (readpropertyfile -file $file -key "starterkitsetup")
 $reportgeneration = (readpropertyfile -file $file -key "reportgeneration")
 $suitegenerationfromswagger = (readpropertyfile -file $file -key "suitegenerationfromswagger")
-$suitegenerationfromapiconfig = (readpropertyfile -file $file -key "suitegenerationfromapiconfig")
+$suitegenerationfromapimconfig = (readpropertyfile -file $file -key "suitegenerationfromapimconfig")
 $jmxconversionneeded = (readpropertyfile -file $file -key "jmxconversionneeded")
 $altsetup = (readpropertyfile -file $file -key "altsetup")
 
@@ -57,8 +57,8 @@ if ($altsetup -ne "true" -and $altsetup -ne "false") {
 if ($jmxconversionneeded -ne "true" -and $jmxconversionneeded -ne "false") {
     throw "Invalid value for 'jmxconversionneeded': $jmxconversionneeded. Expected 'true' or 'false'."
 }
-if ($suitegenerationfromapiconfig -ne "true" -and $suitegenerationfromapiconfig -ne "false") {
-    throw "Invalid value for 'suitegenerationfromapiconfig': $suitegenerationfromapiconfig. Expected 'true' or 'false'."
+if ($suitegenerationfromapimconfig -ne "true" -and $suitegenerationfromapimconfig -ne "false") {
+    throw "Invalid value for 'suitegenerationfromapimconfig': $suitegenerationfromapimconfig. Expected 'true' or 'false'."
 }
 if ($suitegenerationfromswagger -ne "true" -and $suitegenerationfromswagger -ne "false") {
     throw "Invalid value for 'suitegenerationfromswagger': $suitegenerationfromswagger. Expected 'true' or 'false'."
@@ -230,6 +230,7 @@ if ($reportgeneration -eq 'true') {
 
 if ($suitegenerationfromswagger -eq 'true') {
     $featureflag++
+    Write-Output "`n`nSuite generation from Swagger is set to true, so we will proceed with jmx creation based on Swagger"
     $swaggerjsonpath = (readpropertyfile -file $file -key "swaggerjsonpath")
     $global:swaggerjsonpath = $swaggerjsonpath
     if ($ENV:OS -match "Windows")
@@ -240,7 +241,8 @@ if ($suitegenerationfromswagger -eq 'true') {
         .$rootfolder/ps_files/createsuitefromswagger.ps1
     }    
 }
-if ($suitegenerationfromapiconfig -eq 'true') {
+if ($suitegenerationfromapimconfig -eq 'true') {
+    Write-Output "`n`nSuite generation from APIM is set to true, so we will proceed with jmx creation based on APIM"
     $apimconfigpath = (readpropertyfile -file $file -key "apimconfigpath")
     $global:apimconfigpath = $apimconfigpath
     if ($ENV:OS -match "Windows")
@@ -253,6 +255,7 @@ if ($suitegenerationfromapiconfig -eq 'true') {
 }
 
 if ($jmxconversionneeded -eq 'true') {
+    Write-Output "`n`nJMX conversion is true, so we will proceed with jmx conversion based on ALT guidelines"
     $featureflag++
     if ($ENV:OS -match "Windows")
     {
@@ -266,6 +269,7 @@ if ($jmxconversionneeded -eq 'true') {
 }
 
 if ($altsetup -eq 'true') {
+    Write-Output "`n`nAzure Load Test setup and execution is set to true, so we will proceed with this features"
     $featureflag++
     Write-Output "`nChecking Azure CLI Installation"
     if ($ENV:OS -match "Windows")
