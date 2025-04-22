@@ -13,7 +13,7 @@ Ocp-Apim-Subscription-Key: <Place subscription key here>
 "ConfigureDatacollectionconfigurationTarget": "Test",
 "ImpersonatorUserId": "User1"
 }
-PUT https://samplebasepath/campaign/common/UpdateMPCT/{campaignId}/{templateName} HTTP/1.1
+PUT https://samplebasepath/common/{templateName} HTTP/1.1
 Host: samplebasepath
 Content-Type: application/json
 
@@ -59,7 +59,7 @@ Content-Type: application/json
       ]
     }
   ],
-  "createdBy": "vnextadmin@intemearnalliance.onmicrosoft.com",
+  "createdBy": "sample",
   "clientConfig": [
     {
       "key": "string",
@@ -77,8 +77,8 @@ Content-Type: application/json
   "wapPushRequired": true,
   "status": 0,
   "mode": 1,
-  "vinCriteria": "Brand=Renault;IVC model=0000007260;IVI model=1102705",
-  "brand": "RENAULT",
+  "vinCriteria": "model=0000007260",
+  "brand": "",
   "nreCampaignType": 0,
   "mapCampaignType": 0,
   "ecuModel": "TCU or RDO",
