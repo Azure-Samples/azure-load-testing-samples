@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<jmeterTestPlan version="1.2" properties="5.0" jmeter="5.6.3">
+<jmeterTestPlan version="1.2" properties="5.0" jmeter="5.5">
   <hashTree>
     <TestPlan guiclass="TestPlanGui" testclass="TestPlan" testname="JMeter Generic template">
       <elementProp name="TestPlan.user_defined_variables" elementType="Arguments" guiclass="ArgumentsPanel" testclass="Arguments" testname="User Defined Variables">
@@ -93,6 +93,11 @@
           <elementProp name="way2_total_count_ifcondition" elementType="Argument">
             <stringProp name="Argument.name">way2_total_count_ifcondition</stringProp>
             <stringProp name="Argument.value">2</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="appinsightconnectionstring" elementType="Argument">
+            <stringProp name="Argument.name">appinsightconnectionstring</stringProp>
+            <stringProp name="Argument.value">sampleconnectionstring</stringProp>
             <stringProp name="Argument.metadata">=</stringProp>
           </elementProp>
         </collectionProp>
@@ -912,7 +917,7 @@ log.info(preResponse)</stringProp>
               </elementProp>
               <elementProp name="influxdbUrl" elementType="Argument">
                 <stringProp name="Argument.name">influxdbUrl</stringProp>
-                <stringProp name="Argument.value"></stringProp>
+                <stringProp name="Argument.value">http://host_to_change:8086/write?db=jmeter</stringProp>
                 <stringProp name="Argument.metadata">=</stringProp>
               </elementProp>
               <elementProp name="application" elementType="Argument">
@@ -975,9 +980,9 @@ log.info(preResponse)</stringProp>
           <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="User Defined Variables" enabled="true">
             <collectionProp name="Arguments.arguments"/>
           </elementProp>
-          <stringProp name="HTTPSampler.domain"></stringProp>
+          <stringProp name="HTTPSampler.domain">www.bing.com</stringProp>
           <stringProp name="HTTPSampler.port"></stringProp>
-          <stringProp name="HTTPSampler.protocol"></stringProp>
+          <stringProp name="HTTPSampler.protocol">https</stringProp>
           <stringProp name="HTTPSampler.contentEncoding"></stringProp>
           <stringProp name="HTTPSampler.path">/search?q=jmeter</stringProp>
           <stringProp name="HTTPSampler.method">GET</stringProp>
@@ -1001,7 +1006,7 @@ log.info(preResponse)</stringProp>
               </elementProp>
               <elementProp name="connectionString" elementType="Argument">
                 <stringProp name="Argument.name">connectionString</stringProp>
-                <stringProp name="Argument.value"></stringProp>
+                <stringProp name="Argument.value">${appinsightconnectionstring}</stringProp>
                 <stringProp name="Argument.metadata">=</stringProp>
               </elementProp>
               <elementProp name="liveMetrics" elementType="Argument">
@@ -1087,9 +1092,9 @@ log.info(preResponse)</stringProp>
               </elementProp>
             </collectionProp>
           </elementProp>
-          <stringProp name="HTTPSampler.domain"></stringProp>
+          <stringProp name="HTTPSampler.domain">${databricksurl}</stringProp>
           <stringProp name="HTTPSampler.port"></stringProp>
-          <stringProp name="HTTPSampler.protocol"></stringProp>
+          <stringProp name="HTTPSampler.protocol">https</stringProp>
           <stringProp name="HTTPSampler.contentEncoding"></stringProp>
           <stringProp name="HTTPSampler.path">/api/2.0/jobs/run-now</stringProp>
           <stringProp name="HTTPSampler.method">POST</stringProp>
@@ -1197,7 +1202,7 @@ log.info(preResponse)</stringProp>
           <stringProp name="checkQuery"></stringProp>
           <stringProp name="connectionAge">5000</stringProp>
           <stringProp name="connectionProperties"></stringProp>
-          <stringProp name="dataSource">dbconnectionstring</stringProp>
+          <stringProp name="dataSource">${dbconnectionstring}</stringProp>
           <stringProp name="dbUrl"></stringProp>
           <stringProp name="driver"></stringProp>
           <stringProp name="initQuery"></stringProp>
@@ -1303,7 +1308,7 @@ if(WDS.browser.getTitle() == &apos;Service unavailable&apos;) {
     WDS.browser.get(hosturl)
 }
 var flag = 1;
-if(WDS.browser.getTitle() == &apos;NBA - Mission Control&apos;) {
+if(WDS.browser.getTitle() == &apos;Website Title&apos;) {
    WDS.log.info(&quot;Retry Again&quot;);
    WDS.browser.get(hosturl);
 }
@@ -1755,4 +1760,3 @@ without actual network activity. This helps debugging tests.</stringProp>
     </hashTree>
   </hashTree>
 </jmeterTestPlan>
-
