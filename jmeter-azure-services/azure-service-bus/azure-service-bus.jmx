@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jmeterTestPlan version="1.2" properties="5.0" jmeter="5.6.2">
+  <hashTree>
+    <TestPlan guiclass="TestPlanGui" testclass="TestPlan" testname="Test Plan" enabled="true">
+      <boolProp name="TestPlan.functional_mode">false</boolProp>
+      <boolProp name="TestPlan.tearDown_on_shutdown">true</boolProp>
+      <boolProp name="TestPlan.serialize_threadgroups">false</boolProp>
+      <elementProp name="TestPlan.user_defined_variables" elementType="Arguments" guiclass="ArgumentsPanel" testclass="Arguments" testname="User Defined Variables" enabled="true">
+        <collectionProp name="Arguments.arguments"/>
+      </elementProp>
+    </TestPlan>
+    <hashTree>
+      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="Thread Group" enabled="true">
+        <stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
+        <elementProp name="ThreadGroup.main_controller" elementType="LoopController" guiclass="LoopControlPanel" testclass="LoopController" testname="Loop Controller" enabled="true">
+          <intProp name="LoopController.loops">-1</intProp>
+          <boolProp name="LoopController.continue_forever">false</boolProp>
+        </elementProp>
+        <stringProp name="ThreadGroup.num_threads">200</stringProp>
+        <stringProp name="ThreadGroup.ramp_time">30</stringProp>
+        <boolProp name="ThreadGroup.scheduler">true</boolProp>
+        <stringProp name="ThreadGroup.duration">500</stringProp>
+        <stringProp name="ThreadGroup.delay">1</stringProp>
+        <boolProp name="ThreadGroup.same_user_on_next_iteration">true</boolProp>
+        <boolProp name="ThreadGroup.delayedStart">false</boolProp>
+      </ThreadGroup>
+      <hashTree>
+        <Arguments guiclass="ArgumentsPanel" testclass="Arguments" testname="User Defined Variables" enabled="true">
+          <collectionProp name="Arguments.arguments">
+            <elementProp name="udv_sendAccessKey" elementType="Argument">
+              <stringProp name="Argument.name">udv_sendAccessKey</stringProp>
+              <stringProp name="Argument.value">${__GetSecret(sendAccessKey)}</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="udv_serviceBusNamespace" elementType="Argument">
+              <stringProp name="Argument.name">udv_serviceBusNamespace</stringProp>
+              <stringProp name="Argument.value">${__BeanShell( System.getenv(&quot;SBNamespace&quot;) )}</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+          </collectionProp>
+        </Arguments>
+        <hashTree/>
+        <jp.co.pnop.jmeter.protocol.azureservicebus.sampler.AzServiceBusSampler guiclass="jp.co.pnop.jmeter.protocol.azureservicebus.sampler.gui.AzServiceBusSamplerGui" testclass="jp.co.pnop.jmeter.protocol.azureservicebus.sampler.AzServiceBusSampler" testname="Send Message to Queue" enabled="true">
+          <boolProp name="createTransaction">false</boolProp>
+          <stringProp name="createTransacionName"></stringProp>
+          <boolProp name="continueTransaction">true</boolProp>
+          <boolProp name="commitTransaction">false</boolProp>
+          <boolProp name="rollbackTransaction">false</boolProp>
+          <elementProp name="messages" elementType="jp.co.pnop.jmeter.protocol.amqp.sampler.AzAmqpMessages" guiclass="jp.co.pnop.jmeter.protocol.azureservicebus.sampler.gui.AzServiceBusMessagesPanel" testclass="jp.co.pnop.jmeter.protocol.amqp.sampler.AzAmqpMessages" testname="[res_key=Azure Event Hubs Default]" enabled="true">
+            <collectionProp name="Messages.messages">
+              <elementProp name="{&quot;date&quot;: &quot;2022-09-21&quot;, &quot;id&quot;: &quot;7&quot;, &quot;data&quot;: &quot;New Message&quot;}" elementType="jp.co.pnop.jmeter.protocol.amqp.sampler.AzAmqpMessage">
+                <stringProp name="Message.messageType">String</stringProp>
+                <stringProp name="Message.message">{&quot;date&quot;: &quot;2022-09-21&quot;, &quot;id&quot;: &quot;7&quot;, &quot;data&quot;: &quot;New Message&quot;}</stringProp>
+                <stringProp name="Message.partitionKey"></stringProp>
+                <stringProp name="Message.messageId"></stringProp>
+                <stringProp name="Message.groupId"></stringProp>
+                <stringProp name="Message.customProperties"></stringProp>
+                <stringProp name="Message.contentType"></stringProp>
+                <stringProp name="Message.label"></stringProp>
+                <stringProp name="Message.standardProperties"></stringProp>
+              </elementProp>
+              <elementProp name="{&quot;date&quot;: &quot;2022-09-21&quot;, &quot;id&quot;: &quot;6&quot;, &quot;data&quot;: &quot;New Message&quot;}" elementType="jp.co.pnop.jmeter.protocol.amqp.sampler.AzAmqpMessage">
+                <stringProp name="Message.messageType">String</stringProp>
+                <stringProp name="Message.message">{&quot;date&quot;: &quot;2022-09-21&quot;, &quot;id&quot;: &quot;6&quot;, &quot;data&quot;: &quot;New Message&quot;}</stringProp>
+                <stringProp name="Message.partitionKey"></stringProp>
+                <stringProp name="Message.messageId"></stringProp>
+                <stringProp name="Message.groupId"></stringProp>
+                <stringProp name="Message.customProperties"></stringProp>
+                <stringProp name="Message.contentType"></stringProp>
+                <stringProp name="Message.label"></stringProp>
+                <stringProp name="Message.standardProperties"></stringProp>
+              </elementProp>
+            </collectionProp>
+          </elementProp>
+          <elementProp name="svcparams" elementType="jp.co.pnop.jmeter.protocol.azureservicebus.common.AzServiceBusClientParams" guiclass="jp.co.pnop.jmeter.protocol.azureservicebus.common.gui.AzServiceBusClientParamsPanel" testclass="jp.co.pnop.jmeter.protocol.azureservicebus.common.AzServiceBusClientParams" enabled="true">
+            <stringProp name="connectionType">Create New Connection</stringProp>
+            <stringProp name="definedConnectionName"></stringProp>
+            <stringProp name="connectionName"></stringProp>
+            <stringProp name="namespaceName">udv_serviceBusNamespace</stringProp>
+            <stringProp name="authType">Shared access signature</stringProp>
+            <stringProp name="sharedAccessKeyName">sendAccessKey</stringProp>
+            <stringProp name="sharedAccessKey">udv_sendAccessKey</stringProp>
+            <stringProp name="aadCredential"></stringProp>
+            <stringProp name="destType">Queue</stringProp>
+            <stringProp name="queueName">demo-queue</stringProp>
+            <stringProp name="protocol">AMQP</stringProp>
+          </elementProp>
+        </jp.co.pnop.jmeter.protocol.azureservicebus.sampler.AzServiceBusSampler>
+        <hashTree>
+          <JSR223PostProcessor guiclass="TestBeanGUI" testclass="JSR223PostProcessor" testname="JSR223 PostProcessor" enabled="true">
+            <stringProp name="cacheKey">true</stringProp>
+            <stringProp name="filename"></stringProp>
+            <stringProp name="parameters"></stringProp>
+            <stringProp name="script">if (prev.isSuccessful() &amp;&amp; (prev.getResponseCode() == null || prev.getResponseCode() == &quot;&quot;)) {
+	prev.setResponseCode(&quot;200&quot;);
+}
+</stringProp>
+            <stringProp name="scriptLanguage">groovy</stringProp>
+          </JSR223PostProcessor>
+          <hashTree/>
+        </hashTree>
+      </hashTree>
+    </hashTree>
+  </hashTree>
+</jmeterTestPlan>
