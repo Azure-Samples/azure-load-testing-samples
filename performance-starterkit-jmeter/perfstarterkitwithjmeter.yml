@@ -1,0 +1,50 @@
+# Starter pipeline
+# Start with a minimal pipeline that you can customize to build and deploy your code.
+# Add steps that build, run tests, deploy, and more:
+# https://aka.ms/yaml
+
+trigger:
+- main
+
+pool:
+  vmImage: windows-latest
+
+steps:
+- script: echo Hello, world!
+  displayName: 'Run a one-line script'
+
+
+- task: CopyFiles@2
+  inputs:
+    SourceFolder: $(System.DefaultWorkingDirectory)/
+    Contents: "*"
+    TargetFolder: $(System.DefaultWorkingDirectory)/test
+    overWrite: true 
+
+- script: |
+    dir
+    RunMe_win.bat
+    dir
+  displayName: 'Run starter kit'
+
+- task: CopyFiles@2
+  displayName: "Copy Files to: $(build.artifactstagingdirectory)"
+  inputs:
+    SourceFolder: $(System.DefaultWorkingDirectory)\results
+    Contents: "*"
+    TargetFolder: "$(build.artifactstagingdirectory)"
+  condition: succeededOrFailed()
+
+- task: CopyFiles@2
+  displayName: "Copy Files to: $(build.artifactstagingdirectory)/jtlfilereport"
+  inputs:
+    SourceFolder: $(System.DefaultWorkingDirectory)\results\jtlfilereport
+    Contents: "*"
+    TargetFolder: "$(build.artifactstagingdirectory)"
+  condition: succeededOrFailed()
+
+- task: PublishBuildArtifacts@1
+  displayName: "Publish Artifact: drop"
+  inputs:
+    PathtoPublish: "$(build.artifactstagingdirectory)"
+  condition: succeededOrFailed()  
