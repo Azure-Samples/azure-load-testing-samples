@@ -1,6 +1,6 @@
-Write-Output "`n`n***********************************************************"
-Write-Output "              Creating JMeter Master Script template               "
-Write-Output "***********************************************************"
+# Write-Output "`n`n***********************************************************"
+Write-Output "Now creating JMeter Master Script template"
+# Write-Output "***********************************************************"
 # Start-Sleep -Seconds 2
 
 $scriptpath = $MyInvocation.MyCommand.Path
@@ -9,11 +9,11 @@ $dir = Split-Path -Path $dir -Parent
 
 ## Checking the OS ##
 if ($ENV:OS -match "Windows") {
-    Write-Host "Windows"
+    # Write-Host "Windows"
     $dir = $dir+"\results\jmeter_generic_template.jmx"
 }
 else {
-    Write-Host "Linux"
+    # Write-Host "Linux"
     $dir = $dir+"/jmetertemplate.jmx"
 }
 

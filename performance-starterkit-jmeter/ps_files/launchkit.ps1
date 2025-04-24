@@ -10,7 +10,7 @@ Write-Output "******************************************************************
 Write-Output "Welcome to JMETER Starter Kit 'A one stop solution' loaded with the following features:`n1. JAVA Download and installation as JMeter prerequisite `n2. JMeter Download and Setup `n3. Environment Variable setup for Java and JMeter `n4. Create JMeter script Master Template (For majority of script reference)`n5. JMeter suite creation as per Swagger or APIM `n6. JMeter HTML Reporting Creation from .jtl`n7. Conversion of your JMX to ALT compatible `n8. Azure load Test Setup and Execution(CLI should be installed for running this feature)"
 Write-Output "*****************************************************************************************"
 Start-Sleep -Seconds 2
-Write-Output "`n`nExamining the config.properties file to retrieve parameters and determine enabled features for execution or processing"
+Write-Output "`nExamining the config.properties file to retrieve parameters and determine enabled features for execution or processing"
 Write-Output "**************************************************************************************"
 
 $errorflag = 0
@@ -173,8 +173,8 @@ if ($starterkitsetup -eq 'true') {
 
     if ($ENV:OS -match "Windows")
     {
-        # .$rootfolder\ps_files\jmetersetup.ps1
-        # .$rootfolder\ps_files\downloadjmeterplugin.ps1
+        .$rootfolder\ps_files\jmetersetup.ps1
+        .$rootfolder\ps_files\downloadjmeterplugin.ps1
         Write-Output "`n***** JMeter Setup is completed and ready to use *****"
         .$rootfolder\ps_files\createtemplate.ps1
     }
@@ -190,68 +190,103 @@ if ($reportgeneration -eq 'true') {
     $featureflag++
     Write-Output "`n`nReport Generation from jtl is set to true, so we will proceed with the report generation"
     $jtlpath = (readpropertyfile -file $file -key "jtlpath")
-    $directoryPath = Split-Path -Path $jtlpath -Parent
-    if ($ENV:OS -match "Windows")
-    {
-        $resultsPath = "$directoryPath\jtlfilereport\"
-    }
-    else {
-        $resultsPath = "$directoryPath/jtlfilereport/"
-    }    
-    Write-Output "Results Path: $resultsPath"
-
-    # Empty the results folder if it exists
-    if (Test-Path -Path $resultsPath) {
-        Get-ChildItem -Path $resultsPath -Recurse | Remove-Item -Force -Recurse
-        Write-Output "The results folder has been emptied."
-    }
-    if ($ENV:OS -match "Windows")
-    {
-        Write-Output "Generating Report for JTL file at Windows"
-        try {
-            jmeter -g $jtlpath -o $directoryPath\jtlfilereport\
-            Write-Output "***** Report is generated at $directoryPath\results\jtlfilereport\ *****"
-        } catch {
-            Write-Output "Issue in creating Report. Please check the JTL file path or JMeter is installed or not"
-            Write-Warning -Message "Oops, ran into an issue"
+    #Check if file path is valid or not
+    try {
+        if (-not (Test-Path $jtlpath)) {
+            throw "Invalid JTL file path: $jtlpath. Please check the path and try again."
         }
-    }
-    else
-    {
-        try {
-            jmeter -g $directoryPath/results.jtl -o $directoryPath/jtlfilereport\
-            Write-Output "***** Report is generated at $directoryPath/results/jtlfilereport/ *****"    
-        } catch{
-            Write-Output "Issue in creating Report. Please check the JTL file path or JMeter is installed or not"
-            Write-Warning -Message "Oops, ran into an issue"
-        }        
-    }
+        else{
+            $directoryPath = Split-Path -Path $jtlpath -Parent
+            if ($ENV:OS -match "Windows")
+            {
+                $resultsPath = "$directoryPath\jtlfilereport\"
+            }
+            else {
+                $resultsPath = "$directoryPath/jtlfilereport/"
+            }    
+            Write-Output "Results Path: $resultsPath"
+
+            # Empty the results folder if it exists
+            if (Test-Path -Path $resultsPath) {
+                Get-ChildItem -Path $resultsPath -Recurse | Remove-Item -Force -Recurse
+                Write-Output "The results folder has been emptied."
+            }
+            if ($ENV:OS -match "Windows")
+            {
+                Write-Output "Generating Report for JTL file at Windows"
+                try {
+                    jmeter -g $jtlpath -o $directoryPath\jtlfilereport\
+                    Write-Output "***** Report is generated at $directoryPath\results\jtlfilereport\ *****"
+                } catch {
+                    Write-Output "Issue in creating Report. Please check the JTL file path or JMeter is installed or not"
+                    Write-Warning -Message "Oops, ran into an issue"
+                }
+            }
+            else
+            {
+                try {
+                    jmeter -g $directoryPath/results.jtl -o $directoryPath/jtlfilereport\
+                    Write-Output "***** Report is generated at $directoryPath/results/jtlfilereport/ *****"    
+                } catch{
+                    Write-Output "Issue in creating Report. Please check the JTL file path or JMeter is installed or not"
+                    Write-Warning -Message "Oops, ran into an issue"
+                }        
+            }
+        }
+    } catch {
+        Write-Output "Proceeding with next feature as JTL file path is not valid"
+    }    
 }
 
 if ($suitegenerationfromswagger -eq 'true') {
     $featureflag++
     Write-Output "`n`nSuite generation from Swagger is set to true, so we will proceed with jmx creation based on Swagger"
     $swaggerjsonpath = (readpropertyfile -file $file -key "swaggerjsonpath")
-    $global:swaggerjsonpath = $swaggerjsonpath
-    if ($ENV:OS -match "Windows")
-    {
-        .$rootfolder\ps_files\createsuitefromswagger.ps1
+    #Check if file path is valid or not
+    try{
+        if (-not (Test-Path $swaggerjsonpath)) {
+            # Write-Output "Invalid Swagger JSON file path: $swaggerjsonpath. Please check the path and try again."
+            throw "Invalid Swagger JSON file path: $swaggerjsonpath. Please check the path and try again."
+        }
+        else {
+            $global:swaggerjsonpath = $swaggerjsonpath
+            if ($ENV:OS -match "Windows")
+            {
+                .$rootfolder\ps_files\createsuitefromswagger.ps1
+            }
+            else {
+                .$rootfolder/ps_files/createsuitefromswagger.ps1
+            } 
+        }
+    } catch {
+        Write-Output "Proceeding with next feature as Swagger JSON file path is not valid"
     }
-    else {
-        .$rootfolder/ps_files/createsuitefromswagger.ps1
-    }    
+       
 }
 if ($suitegenerationfromapimconfig -eq 'true') {
     Write-Output "`n`nSuite generation from APIM is set to true, so we will proceed with jmx creation based on APIM"
     $apimconfigpath = (readpropertyfile -file $file -key "apimconfigpath")
-    $global:apimconfigpath = $apimconfigpath
-    if ($ENV:OS -match "Windows")
-    {
-        .$rootfolder\ps_files\createsuitefromapimconfig.ps1
+    #Check if file path is valid or not
+    try {
+        if (-not (Test-Path $apimconfigpath)) {
+            # Write-Output "Invalid APIM config file path: $apimconfigpath. Please check the path and try again."
+            throw "Invalid APIM config file path: $apimconfigpath. Please check the path and try again."
+        }
+        else
+        {
+            $global:apimconfigpath = $apimconfigpath
+            if ($ENV:OS -match "Windows")
+            {
+                .$rootfolder\ps_files\createsuitefromapimconfig.ps1
+            }
+            else {
+                .$rootfolder/ps_files/createsuitefromapimconfig.ps1
+            }
+        }
+    } catch {
+        Write-Output "Proceeding with next feature as APIM config file path is not valid"
     }
-    else {
-        .$rootfolder/ps_files/createsuitefromapimconfig.ps1
-    } 
+
 }
 
 if ($jmxconversionneeded -eq 'true') {
