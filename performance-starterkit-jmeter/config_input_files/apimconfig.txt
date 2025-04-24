@@ -1,0 +1,119 @@
+GET https://samplebasepath/api/admin/mutedevicelist/{deviceId} HTTP/1.1
+Host: samplebasepath
+POST https://samplebasepath/api/admin/mutedevicelist/update HTTP/1.1
+Host: samplebasepath
+POST https://samplebasepath/ilon/v1/manageconfiguration HTTP/1.1
+Host: samplebasepath
+Content-Type: application/json
+Ocp-Apim-Subscription-Key: <Place subscription key here>
+{
+"VIN": "CAR1",
+"ConfigureDatacollectionConfigurationID": "239022508978216206139",
+"ConfigureDatacollectionConfigurationContent": "Test",
+"ConfigureDatacollectionconfigurationTarget": "Test",
+"ImpersonatorUserId": "User1"
+}
+PUT https://samplebasepath/common/{templateName} HTTP/1.1
+Host: samplebasepath
+Content-Type: application/json
+
+{
+  "Id": "634609aa-eae0-48cc-ae63-29e87a80182b",
+  "softwareList": [
+    "1",
+    "2",
+    "3"
+  ],
+  "CampaignStartDate": "2019-03-16T11:36:00Z",
+  "CampaignEndDate": "2019-03-16T11:36:00Z",
+  "CampaignType": 1,
+  "Priority": {},
+  "MaxRetryNumber": 3,
+  "Name": "TestDraftStatus-Simulate-March15",
+  "NetworkUsage": 0,
+  "WifiExpirationDate": "2019-03-16T11:36:00Z",
+  "Quota": 100000,
+  "RerunCount": 0,
+  "RerunDuration": 0,
+  "ActionOnInstallationFailure": 0,
+  "settingMethod": "GET",
+  "settingList": [
+    {
+      "settingId": "39449461-4d35-4a90-ab4e-7545ce402c3b",
+      "settingName": "UpdateFavouriteRegionSettingName",
+      "method": "UpdateFavouriteRegionMethod",
+      "properties": [
+        {
+          "name": "id",
+          "value": {
+            "ProductId": "1",
+            "BaselineMapId": "2",
+            "SupplierId": "3",
+            "UpdateRegionIds": [
+              1,
+              2,
+              3
+            ]
+          }
+        }
+      ]
+    }
+  ],
+  "createdBy": "sample",
+  "clientConfig": [
+    {
+      "key": "string",
+      "value": 1,
+      "unit": "string"
+    }
+  ],
+  "vinList": [
+    "77",
+    "88",
+    "00"
+  ],
+  "Type": 1,
+  "isDraft": true,
+  "wapPushRequired": true,
+  "status": 0,
+  "mode": 1,
+  "vinCriteria": "model=0000007260",
+  "brand": "",
+  "nreCampaignType": 0,
+  "mapCampaignType": 0,
+  "ecuModel": "TCU or RDO",
+  "isValidationRequired": true,
+  "dynamicHmiLanguage": null,
+  "DynamicHmiXml": null,
+  "ComponentList": null,
+  "ProfileList": null,
+  "extendedVinScope": "string",
+  "isUsb": true,
+  "isInternal": true,
+  "campaignStep": 1,
+  "vespaCampaignType": 1,
+  "isVespaMockup": true,
+  "isVinExclusionRequired": true,
+  "ecuModels": null,
+  "DynamicHmiStepTwo": null,
+  "DynamicHmiStepTwoXml": null,
+  "executionDate": "2019-03-16T11:36:00Z",
+  "updateDate": "2019-03-16T11:36:00Z",
+  "updateStartTime": "2019-03-16T11:36:00Z",
+  "createdDate": "2019-03-16T11:36:00Z",
+  "isNreDirect": true,
+  "OTS_Reference": null,
+  "Total_Operations_Count": 3,
+  "rootGroupId": null,
+  "groupId": null,
+  "groupName": null,
+  "vinscopeFileName": null,
+  "vinscopeFiles": null,
+  "isDefaultGroup": true,
+  "isAdditionalVinGroup": true,
+  "serverInitiated": 1,
+  "bindingId": null,
+  "vespaProcessingVersion": 3,
+  "rerunCounter": 3,
+  "IsRerunApplicable": true
+}

@@ -1,0 +1,1 @@
+echo "inside bat file"
