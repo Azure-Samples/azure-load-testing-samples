@@ -1,0 +1,5 @@
+timeStamp,elapsed,label,responseCode,responseMessage,threadName,dataType,success,failureMessage,bytes,sentBytes,grpThreads,allThreads,URL,Latency,IdleTime,Connect
+1720071158524,1099,HTTP Request,200,OK,Thread Group 1-1,text,true,,145838,380,1,1,https://www.bing.com/?scope=web&cc=IN,476,0,440
+1720071158524,479,HTTP Request-0,301,Moved Permanently,Thread Group 1-1,,true,,495,128,1,1,https://www.bing.com/search/Shivam,476,0,440
+1720071159017,253,HTTP Request-1,302,Moved Temporarily,Thread Group 1-1,text,true,,1903,121,1,1,https://www.bing.com/search,253,0,0
+1720071159271,352,HTTP Request-2,200,OK,Thread Group 1-1,text,true,,143440,131,1,1,https://www.bing.com/?scope=web&cc=IN,256,0,0
