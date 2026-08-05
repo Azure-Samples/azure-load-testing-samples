@@ -5,7 +5,7 @@ languages:
 - azurecli
 products:
 - azure
-- azure-load-testing
+- azure-app-testing
 urlFragment: azure-load-testing-rerun-azure-cli
 description: Rerun an existing test run from Azure CLI extension for Azure Load Testing
 ---

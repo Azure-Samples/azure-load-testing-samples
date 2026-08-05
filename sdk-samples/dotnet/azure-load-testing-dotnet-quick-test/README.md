@@ -4,7 +4,7 @@ languages:
 - csharp
 products:
 - azure
-- azure-load-testing
+- azure-app-testing
 urlFragment: azure-load-testing-dotnet-quick-test
 description: Create an Azure Load Testing quick test by using the Azure Load Testing library for .NET
 ---

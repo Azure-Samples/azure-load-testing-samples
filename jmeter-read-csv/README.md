@@ -4,7 +4,7 @@ languages:
 - xml
 products:
 - azure
-- azure-load-testing
+- azure-app-testing
 urlFragment: azure-load-testing-jmeter-read-csv
 description: Read input data from a CSV file in Azure Load Testing
 ---

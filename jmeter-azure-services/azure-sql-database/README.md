@@ -4,7 +4,7 @@ languages:
 - xml
 products:
 - azure
-- azure-load-testing
+- azure-app-testing
 urlFragment: azure-load-testing-jmeter-azure-sql-database
 description: Load testing Azure SQL Database with Azure Load Testing
 ---
