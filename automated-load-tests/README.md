@@ -4,7 +4,7 @@ languages:
 - Python
 products:
 - azure
-- azure-load-testing
+- azure-app-testing
 urlFragment: automated-load-tests
 description: Automatically run and monitor load tests by using the Azure Load Testing library for Python
 ---

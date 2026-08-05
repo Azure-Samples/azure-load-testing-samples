@@ -4,7 +4,7 @@ languages:
 - Python
 products:
 - azure
-- azure-load-testing
+- azure-app-testing
 urlFragment: jmeter-backend-listeners
 description: Sample JMX scripts for using JMeter Backend Listeners
 ---

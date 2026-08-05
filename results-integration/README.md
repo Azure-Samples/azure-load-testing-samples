@@ -4,7 +4,7 @@ languages:
 - Python
 products:
 - azure
-- azure-load-testing
+- azure-app-testing
 urlFragment: results-integration
 description: Automatically visualize load test results in a custom dashboard by using the Azure Load Testing library for Python
 ---

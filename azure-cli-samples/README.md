@@ -5,7 +5,7 @@ languages:
 - azurecli
 products:
 - azure
-- azure-load-testing
+- azure-app-testing
 urlFragment: azure-load-testing-azure-cli
 description: Azure CLI samples for Azure Load Testing
 ---

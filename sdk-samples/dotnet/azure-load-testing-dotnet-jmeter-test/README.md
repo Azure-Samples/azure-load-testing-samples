@@ -4,7 +4,7 @@ languages:
 - csharp
 products:
 - azure
-- azure-load-testing
+- azure-app-testing
 urlFragment: azure-load-testing-dotnet-jmeter-test
 description: Create a load test with an existing JMeter script by using the Azure Load Testing library for .NET
 ---

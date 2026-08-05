@@ -4,7 +4,7 @@ languages:
 - xml
 products:
 - azure
-- azure-load-testing
+- azure-app-testing
 urlFragment: azure-load-testing-jmeter-azure-service-bus
 description: Load testing Azure Service Bus with Azure Load Testing
 ---

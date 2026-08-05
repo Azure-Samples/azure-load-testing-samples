@@ -5,7 +5,7 @@ languages:
 - azurecli
 products:
 - azure
-- azure-load-testing
+- azure-app-testing
 urlFragment: azure-load-testing-create-test-azure-cli
 description: Create and run load test with load test from Azure CLI extension for Azure Load Testing
 ---
